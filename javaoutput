@@ -1,0 +1,17 @@
+# scan_clazz.py -m icr -p /Users/lego/workspace/trainee/
+digraph G {
+    RemoteService[shape = plaintext]
+    Service[shape = component]
+    MyAidlInterfaceImpl[shape = plaintext]
+    xyz・lego・trainee・IMyAidlInterface・Stub[shape = component]
+    MainActivity[shape = plaintext]
+    AppCompatActivity[shape = component]
+    LocalService[shape = plaintext]
+    RemoteService -> Service[arrowhead = empty color=purple]
+    MyAidlInterfaceImpl -> xyz・lego・trainee・IMyAidlInterface・Stub[arrowhead = empty color=purple]
+    MainActivity -> AppCompatActivity[arrowhead = empty color=purple]
+    LocalService -> Service[arrowhead = empty color=purple]
+    RemoteService -> MyAidlInterfaceImpl[style = dashed]
+    MainActivity -> Service[style = dashed]
+    MainActivity -> xyz・lego・trainee・IMyAidlInterface・Stub[style = dashed]
+}
